@@ -58,7 +58,6 @@ public class TablaSimbolos <K extends Comparable<K>, V extends Comparable <V>> i
 		return null;
 	}
 
-	@Override
 	public V remove(K key) 
 	{
 		V eliminado1=null;

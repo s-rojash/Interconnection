@@ -226,26 +226,25 @@ public class Modelo {
 		while(!pila.isEmpty())
 		{
 			Edge arco= ((Edge)pila.pop());
-
-			if(arco.getSource().getInfo().getClass().getName().equals("model.data_structures.Landing"))
+			if(arco.getSource().getInfo() instanceof Landing)
 			{
 				longorigen=((Landing)arco.getSource().getInfo()).getLongitude();
 				latorigen=((Landing)arco.getSource().getInfo()).getLongitude();
 				origennombre=((Landing)arco.getSource().getInfo()).getLandingId();
 			}
-			if(arco.getSource().getInfo().getClass().getName().equals("model.data_structures.Country"))
+			if(arco.getSource().getInfo() instanceof Country)
 			{
 				longorigen=((Country)arco.getSource().getInfo()).getLongitude();
 				latorigen=((Country)arco.getSource().getInfo()).getLongitude();
 				origennombre=((Country)arco.getSource().getInfo()).getCapitalName();
 			}
-			if (arco.getDestination().getInfo().getClass().getName().equals("model.data_structures.Landing"))
+			if (arco.getDestination().getInfo() instanceof Landing)
 			{
 				latdestino=((Landing)arco.getDestination().getInfo()).getLatitude();
 				longdestino=((Landing)arco.getDestination().getInfo()).getLatitude();
 				destinonombre=((Landing)arco.getDestination().getInfo()).getLandingId();
 			}
-			if(arco.getDestination().getInfo().getClass().getName().equals("model.data_structures.Country"))
+			if(arco.getDestination().getInfo() instanceof Country)
 			{
 				longdestino=((Country)arco.getDestination().getInfo()).getLatitude();
 				latdestino=((Country)arco.getDestination().getInfo()).getLatitude();
@@ -636,25 +635,42 @@ public class Modelo {
 		Reader in = new FileReader("./data/countries.csv");
 		Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader().parse(in);
 		int contador=1;
+
+		String countryName;
+
+		String capitalName;
+
+		double latitude;
+
+		double longitude;
+
+		String code;
+
+		String continentName;
+
+		float population;
+
+		double users;
+
 		for (CSVRecord record : records) 
 		{
 			if(!record.get(0).equals(""))
 			{
-				String countryName= record.get(0);
+				 countryName= record.get(0);
 				
-				String capitalName= record.get(1);
+				 capitalName= record.get(1);
 				
-				double latitude= Double.parseDouble(record.get(2));
+				 latitude= Double.parseDouble(record.get(2));
 				
-				double longitude= Double.parseDouble(record.get(3));
+				 longitude= Double.parseDouble(record.get(3));
 				
-				String code= record.get(4);
+				 code= record.get(4);
 				
-				String continentName= record.get(5);
+				 continentName= record.get(5);
 				
-				float population= Float.parseFloat(record.get(6).replace(".", ""));
+				 population= Float.parseFloat(record.get(6).replace(".", ""));
 				
-				double users= Double.parseDouble(record.get(7).replace(".", ""));;
+				 users= Double.parseDouble(record.get(7).replace(".", ""));;
 				
 				Country pais= new Country(countryName, capitalName, latitude, longitude, code, continentName, population, users);
 				
@@ -685,9 +701,9 @@ public class Modelo {
 			
 			String paisnombre= x[x.length-1];
 			
-			double latitude= Double.parseDouble(record2.get(3));
+			latitude= Double.parseDouble(record2.get(3));
 			
-			double longitude= Double.parseDouble(record2.get(4));
+			longitude= Double.parseDouble(record2.get(4));
 			
 			Landing landing= new Landing(landingId, id, name, paisnombre, latitude, longitude);
 			

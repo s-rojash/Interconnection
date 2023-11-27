@@ -97,7 +97,6 @@ public class TablaHashSeparteChaining <K extends Comparable<K>, V extends Compar
 		return retornar;
 	}
 
-	@Override
 	public V remove(K key) 
 	{
 		V retornar=null;

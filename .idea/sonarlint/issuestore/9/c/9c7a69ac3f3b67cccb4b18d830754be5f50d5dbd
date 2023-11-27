@@ -1,14 +1,12 @@
 
 K
-java:S3740Ñ"/Provide the parametrized type for this generic.(œÂÂßûÿÿÿÿ
+java:S3740Í"/Provide the parametrized type for this generic.(œÂÂßûÿÿÿÿ
 z
 java:S1192s"dDefine a constant instead of duplicating this literal "No es vÃ¡lido el elemento ingresado" 3 times.(ŒÞ«„
 w
-java:S1192;"\Define a constant instead of duplicating this literal "La posiciÃ³n no es vÃ¡lida" 12 times.(•Ô‚Çúÿÿÿÿ
+java:S1192;"\Define a constant instead of duplicating this literal "La posiciÃ³n no es vÃ¡lida" 11 times.(•Ô‚Çúÿÿÿÿ
 q
 java:S1192C"VDefine a constant instead of duplicating this literal "La lista estÃ¡ vacÃ­a" 9 times.(ÞŽ©…úÿÿÿÿ
-b
-java:S2583®"DChange this condition so that it does not always evaluate to "false"(¹†¦¨8ö‡€÷À1
 @
 java:S1197"*Move the array designators [] to the type.(çá³÷
 o
@@ -21,4 +19,4 @@ java:S3012Ü"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "Sy
 p
 java:S3012±"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ãûþÓ
 N
-java:S1135á"2Complete the task associated to this TODO comment.(» æžÿÿÿÿÿ
+java:S1135Ý"2Complete the task associated to this TODO comment.(» æžÿÿÿÿÿ

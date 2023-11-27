@@ -127,7 +127,6 @@ public class TablaHashLinearProbing <K extends Comparable<K>, V extends Comparab
 		return retornar;	
 	}
 
-	@Override
 	public V remove(K key) 
 	{
 		int posicion=hash(key);
