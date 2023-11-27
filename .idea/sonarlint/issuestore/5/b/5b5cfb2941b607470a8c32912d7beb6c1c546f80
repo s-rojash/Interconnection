@@ -1,0 +1,12 @@
+
+u
+java:S2293Þ"YReplace the type specification in this constructor call with the diamond operator ("<>").(â±—Ïýÿÿÿÿ
+f	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êâ­<
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(íØÎàþÿÿÿÿ
+c
+java:S3973¬"GUse indentation to denote the code conditionally executed by this "if".(Ãž¸áüÿÿÿÿ
+]
+java:S1126“"AReplace this if-then-else statement by a single return statement.(—Ùôƒÿÿÿÿÿ
+N
+java:S1135¶"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ

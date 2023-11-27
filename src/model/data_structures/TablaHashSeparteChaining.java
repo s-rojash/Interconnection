@@ -339,8 +339,8 @@ public class TablaHashSeparteChaining <K extends Comparable<K>, V extends Compar
     	double tam= tamanoAct;
 		double tam2=tamanoTabla;
 		DecimalFormat df= new DecimalFormat("###.##");
-		double tamañoCarga= tam/tam2;
-		retorno+="\nEl factor de carga es: " + df.format(tamañoCarga);
+		double tamanoCarga= tam/tam2;
+		retorno+="\nEl factor de carga es: " + df.format(tamanoCarga);
     	retorno+="\nLa cantidad de rehash es: " + cantidadRehash;
     	
     	return retorno;
