@@ -1,0 +1,75 @@
+
+u
+java:S2293™"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºÂøùÿÿÿÿ
+u
+java:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(È®ã÷üÿÿÿÿ
+p
+java:S2293„"YReplace the type specification in this constructor call with the diamond operator ("<>").(ëØú
+u
+java:S2293¿"YReplace the type specification in this constructor call with the diamond operator ("<>").(È®ã÷üÿÿÿÿ
+u
+java:S1192ç"^Define a constant instead of duplicating this literal "model.data_structures.Landing" 3 times.(©«¢¤
+a
+java:S1192^"KDefine a constant instead of duplicating this literal "
+ Nombre: " 3 times.(ˆŸÙ¥
+F
+java:S1066ƒ"/Merge this if statement with the enclosing one.(„†İ¶
+8
+java:S1643"Use a StringBuilder instead.(ºâ÷ºıÿÿÿÿ
+M
+java:S1135h"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+A	java:S106"+Replace this use of System.out by a logger.(ìÍ¦‡
+N
+java:S1135"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+N
+java:S1135Ô"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+O
+java:S1854‹"8Remove this useless assignment to local variable "pais".(°ñ©ı
+N
+java:S1135ï"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+N
+java:S1135§"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+N
+java:S1135»"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+n
+java:S3776Å"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(î¿™€şÿÿÿÿ
+8
+java:S1116Î"Remove this empty statement.(È®ã÷üÿÿÿÿ
+N
+java:S1135ü"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+3
+java:S1116„"Remove this empty statement.(ëØú
+N
+java:S1135²"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+i
+java:S3776º"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(§‹”Û
+8
+java:S1116¿"Remove this empty statement.(È®ã÷üÿÿÿÿ
+N
+java:S1135ï"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+n
+java:S3776õ"RRefactor this method to reduce its Cognitive Complexity from 49 to the 15 allowed.(‹ÇòÆÿÿÿÿÿ
+Q
+java:S1854Ë":Remove this useless assignment to local variable "length".(¯Ò°ç
+N
+java:S1874ş"2Remove this use of "withHeader"; it is deprecated.(§ş’¢úÿÿÿÿ
+I
+java:S1481ÿ"-Remove this unused "contador" local variable.(Í¾úûÿÿÿÿ
+V
+java:S6213€":Rename this variable to not match a restricted identifier.(ŠñÃ÷ûÿÿÿÿ
+8
+java:S1116’"Remove this empty statement.(Ñá¾øúÿÿÿÿ
+H
+java:S1874 "2Remove this use of "withHeader"; it is deprecated.(¥‹ãq
+E
+java:S1481¢".Remove this unused "contador2" local variable.(£ á¸
+E
+java:S1481¹")Remove this unused "pais" local variable.(â²­£ıÿÿÿÿ
+N
+java:S1874¾"2Remove this use of "withHeader"; it is deprecated.(‚Ú€Ïüÿÿÿÿ
+J
+java:S1481À".Remove this unused "contador3" local variable.(»‰æ›ÿÿÿÿÿ
+B
+java:S1481Ë"+Remove this unused "length" local variable.(¯Ò°ç
+ã
+java:S6541õ"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 169 to 64, Complexity from 22 to 14, Nesting Level from 5 to 2, Number of Variables from 62 to 6.(‹ÇòÆÿÿÿÿÿ
