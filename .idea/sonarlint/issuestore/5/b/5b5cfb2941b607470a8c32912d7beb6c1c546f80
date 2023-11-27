@@ -1,12 +1,18 @@
 
-u
-java:S2293Þ"YReplace the type specification in this constructor call with the diamond operator ("<>").(â±—Ïýÿÿÿÿ
-f	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êâ­<
-P
-java:S1191"5Use classes from the Java API instead of Sun classes.(íØÎàþÿÿÿÿ
-c
-java:S3973¬"GUse indentation to denote the code conditionally executed by this "if".(Ãž¸áüÿÿÿÿ
-]
-java:S1126“"AReplace this if-then-else statement by a single return statement.(—Ùôƒÿÿÿÿÿ
-N
-java:S1135¶"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
+L
+java:S3740."/Provide the parametrized type for this generic.(žÆ´„8Ù„×÷À1
+L
+java:S37402"/Provide the parametrized type for this generic.(£‰¦„8Ù„×÷À1
+L
+java:S37404"/Provide the parametrized type for this generic.(žÆ´„8Ù„×÷À1
+M
+java:S3740¢"/Provide the parametrized type for this generic.(Ñ¹Þ8Ù„×÷À1
+R
+java:S3740¿"/Provide the parametrized type for this generic.(’üŽÚùÿÿÿÿ8Ù„×÷À1
+R
+java:S3740Ý"/Provide the parametrized type for this generic.(šŽ©ýÿÿÿÿ8Ù„×÷À1
+m	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êâ­<8Ú„×÷À1
+d
+java:S1126’"AReplace this if-then-else statement by a single return statement.(—Ùôƒÿÿÿÿÿ8ß†×÷À1
+U
+java:S1135µ"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ8â†×÷À1

@@ -12,7 +12,7 @@ public class TablaSimbolos <K extends Comparable<K>, V extends Comparable <V>> i
 
 	public void put(K key, V value) 
 	{
-		NodoTS<K, V> agregar = new NodoTS<K, V>(key, value);
+		NodoTS<K, V> agregar = new NodoTS(key, value);
 		try 
 		{
 			listaNodos.insertElement(agregar, size()+1);

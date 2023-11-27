@@ -2,7 +2,6 @@ package model.data_structures;
 
 import java.text.DecimalFormat;
 
-import sun.security.util.Debug;
 
 public class TablaHashSeparteChaining <K extends Comparable<K>, V extends Comparable <V>> implements ITablaSimbolos<K, V >
 {
@@ -44,13 +43,13 @@ public class TablaHashSeparteChaining <K extends Comparable<K>, V extends Compar
 			
 			if(listasc!=null && !contains(key))
 			{
-				listasc.insertElement(new NodoTS<K,V>(key, value), listasc.size()+1);
+				listasc.insertElement(new NodoTS(key, value), listasc.size()+1);
 			}
 			else
 			{
-				listaNodos.changeInfo(posicion, new ArregloDinamico<NodoTS<K,V>>(1));
+				listaNodos.changeInfo(posicion, new ArregloDinamico(1));
 				listasc=listaNodos.getElement(posicion);
-				listasc.insertElement(new NodoTS<K,V>(key, value), listasc.size()+1);
+				listasc.insertElement(new NodoTS(key, value), listasc.size()+1);
 			}
 		} 
 		catch (PosException | VacioException | NullException e) 
@@ -219,7 +218,7 @@ public class TablaHashSeparteChaining <K extends Comparable<K>, V extends Compar
 	@Override
 	public ILista<NodoTS<K, V>> darListaNodos() 
 	{
-		ILista<NodoTS<K, V>> nodos= new ArregloDinamico<NodoTS<K, V>>(1);
+		ILista<NodoTS<K, V>> nodos= new ArregloDinamico(1);
 		try 
 		{
 			for (int i=1; i<= tamanoTabla; i++)
@@ -292,14 +291,12 @@ public class TablaHashSeparteChaining <K extends Comparable<K>, V extends Compar
 
         if (n > 1 && n <= 3) return true;
 
-
         if (n % 2 == 0 || n % 3 == 0) return false;
 
-        for (int i = 5; i * i <= n; i = i + 6)
-
-            if (n % i == 0 || n % (i + 2) == 0)
-
-            return false;
+        for (int i = 5; i * i <= n; i = i + 6) {
+			if (n % i == 0 || n % (i + 2) == 0)
+				return false;
+		}
 
         return true;
     }

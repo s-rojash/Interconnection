@@ -43,7 +43,7 @@ public class TablaHashLinearProbing <K extends Comparable<K>, V extends Comparab
 				posicion=getNextEmpty(posicion);
 			}
 
-			NodoTS<K, V> nuevo= new NodoTS<K, V>(key, value);
+			NodoTS<K, V> nuevo= new NodoTS(key, value);
 			listaNodos.changeInfo(posicion, nuevo);
 			tamanoAct++;
 
@@ -183,7 +183,7 @@ public class TablaHashLinearProbing <K extends Comparable<K>, V extends Comparab
 	{
 		V valor=get(key);
 		boolean retornar=false;
-		if (!valor.equals(null))
+		if (valor != (null))
 		{
 			retornar=true;
 		}
@@ -256,7 +256,7 @@ public class TablaHashLinearProbing <K extends Comparable<K>, V extends Comparab
 	@Override
 	public ILista<NodoTS<K, V>> darListaNodos() 
 	{
-		ILista<NodoTS<K, V>> nodos= new ArregloDinamico<NodoTS<K, V>>(1);
+		ILista<NodoTS<K, V>> nodos= new ArregloDinamico(1);
 		
 		try 
 		{
@@ -353,16 +353,6 @@ public class TablaHashLinearProbing <K extends Comparable<K>, V extends Comparab
 		}
 		return prime;
 
-	}
-
-	public int darMinicial()
-	{
-		return minicial;
-	}
-
-	public int darMfinal()
-	{
-		return tamanoTabla;
 	}
 
 	public String toString()

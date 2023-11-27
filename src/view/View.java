@@ -1,6 +1,5 @@
 package view;
 
-import model.data_structures.TablaSimbolos;
 import model.logic.Modelo;
 
 public class View 
@@ -8,9 +7,7 @@ public class View
 	    /**
 	     * Metodo constructor
 	     */
-	    public View()
-	    {
-	    	
+	    public View() { // default implementation ignored
 	    }
 	    
 		public void printMenu()

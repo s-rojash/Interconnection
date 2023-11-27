@@ -52,16 +52,6 @@ public class Vertex<K extends Comparable<K>,V  extends Comparable <V>> implement
 		marked=false;
 	}
 	
-	public int outdegree()
-	{
-		return arcos.size();
-	}
-	
-	public int indegree() 
-	{
-		return arcos.size();
-	}
-	
 	public Edge<K,V> getEdge(K vertex)
 	{
 		Edge<K,V> retorno=null;
@@ -85,54 +75,11 @@ public class Vertex<K extends Comparable<K>,V  extends Comparable <V>> implement
 	
 	}
 	
-	public ILista<Vertex<K,V>> vertices()
-	{
-		ILista<Vertex<K,V>> retorno=new ArregloDinamico<>(1);
-		for(int i=1; i<=arcos.size(); i++)
-		{
-			try {
-				retorno.insertElement(arcos.getElement(i).getDestination(), retorno.size()+1);
-			} catch (PosException | NullException | VacioException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		return retorno; 
-	}
-	
 	public ILista<Edge<K,V>> edges()
 	{
 		return arcos;
 	}
-	
-	public void bfs()
-	{
-		ColaEncadenada<Vertex<K, V>> cola= new ColaEncadenada<Vertex<K, V>>();
-		mark();
-		cola.enqueue(this);
-		while(cola.peek() !=null)
-		{
-			Vertex<K, V> actual= cola.dequeue();
-			for(int i=1; i<=actual.arcos.size(); i++)
-			{
-				Vertex<K, V> dest;
-				try 
-				{
-					dest = actual.edges().getElement(i).getDestination();
-					if(dest.marked)
-					{
-						mark();
-						cola.enqueue(dest);
-					}
-				} 
-				catch (PosException | VacioException e) 
-				{
-					e.printStackTrace();
-				}
-			}
-		}
-	}
+
 	
 	public void dfs(Edge<K, V> edgeTo)
 	{

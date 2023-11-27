@@ -1,0 +1,8 @@
+
+o
+java:S1210G"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(‘¿Çñ
+w
+java:S1450"URemove the "codigo" field and declare it as a local variable in the relevant methods.(²óõàÿÿÿÿÿ8ÙÚ÷øÀ1
+E	java:S106I"+Replace this use of System.out by a logger.(¸³ÍÉøÿÿÿÿ
+L
+java:S1068"*Remove this unused "codigo" private field.(²óõàÿÿÿÿÿ8ßÚ÷øÀ1

@@ -1,19 +1,12 @@
 package controller;
 
 import java.io.IOException;
-import java.util.Comparator;
 import java.util.Scanner;
 
-import model.data_structures.ILista;
-import model.data_structures.NullException;
-import model.data_structures.PosException;
-import model.data_structures.VacioException;
-import model.data_structures.YoutubeVideo;
 import model.logic.Modelo;
-import utils.Ordenamiento;
 import view.View;
 
-public class Controller<T> {
+public class Controller {
 
 	/* Instancia del Modelo*/
 	private Modelo modelo;
@@ -51,29 +44,22 @@ public class Controller<T> {
 
 					e.printStackTrace();
 				}
-				view.printModelo(modelo);	
-
+				view.printModelo(modelo);
 				break;
-				
 			case 2:
 				view.printMessage("--------- \nIngrese el nombre del primer punto de conexión");
 				String punto1= lector.next();
 				lector.nextLine();
-				
 				view.printMessage("--------- \nIngrese el nombre del segundo punto de conexión");
 				String punto2= lector.next();
 				lector.nextLine();
-				
 				String res1=modelo.req1String(punto1, punto2);
 				view.printMessage(res1);
-				
 				break;
-				
 			case 3:
 				String res2= modelo.req2String();
 				view.printMessage(res2);
 				break;
-				
 			case 4:
 				view.printMessage("--------- \nIngrese el nombre del primer país");
 				String pais1= lector.next();

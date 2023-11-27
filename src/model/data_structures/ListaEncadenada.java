@@ -4,6 +4,11 @@ import java.util.Comparator;
 
 public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 
+	private final String elemtoNoValido = "No es válido el elemento ingresado";
+
+	private final String posicionNoValida = "La posición no es válida";
+
+	private final String vacio = "La lista está vacía";
 	private Nodo<T> first;
 	
 	private int size;
@@ -19,7 +24,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	
 	public ListaEncadenada(T element)
 	{
-		first= new Nodo<T>(element);
+		first= new Nodo(element);
 		last= first;
 		size=1;
 	}
@@ -28,7 +33,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	//isEmpty o que la posición no sea válida
 	public void addFirst(T element)
 	{
-		Nodo<T> actual= new Nodo<T>(element);
+		Nodo<T> actual= new Nodo(element);
 		actual.setNext(first);
 		first=actual;
 	}
@@ -37,7 +42,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	//isEmpty o que la posición no sea válida
 	public void addLast(T element)
 	{
-		Nodo<T> actual= new Nodo<T>(element);
+		Nodo<T> actual= new Nodo(element);
 		last.setNext(actual);
 		last=actual;
 		actual.setNext(null);
@@ -49,20 +54,20 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 
 		 if (element==null)
 		 {
-			 throw new NullException("No es válido el elemento ingresado");
+			 throw new NullException(elemtoNoValido);
 		 }
 		 
 		else 
 		{
 			if (first==null)
 			{
-				 Nodo<T> actual= new Nodo<T>(element);
+				 Nodo<T> actual= new Nodo(element);
 				 last=actual;
 				 first=actual;
 			}
 			else
 			{
-				Nodo<T> actual= new Nodo<T>(element);
+				Nodo<T> actual= new Nodo(element);
 				last.setNext(actual);
 				last=actual;
 				actual.setNext(null);
@@ -73,15 +78,15 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	
 	public void insertElement(T elemento, int pos) throws PosException, NullException
 	{
-		 Nodo<T> nuevo = new Nodo<T>(elemento);
+		 Nodo<T> nuevo = new Nodo(elemento);
 		 
 		 if (pos<1 || pos-1 >size)
 		 {
-			 throw new PosException("La posición no es válida");
+			 throw new PosException(posicionNoValida);
 		 }
 		 else if (elemento==null)
 		 {
-			 throw new NullException("No es válido el elemento ingresado");
+			 throw new NullException(elemtoNoValido);
 		 }
 		 
 		 else
@@ -132,8 +137,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	public T removeLast()
 	{
 		Nodo<T> penultimo= first;
-		while(penultimo.getNext().getNext()!=null)
-		{
+		while(penultimo.getNext().getNext()!=null){
 			penultimo=penultimo.getNext();
 		}
 		Nodo<T> ultimo= penultimo.getNext();
@@ -148,18 +152,14 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	public T removeLastPila() throws VacioException
 	{
 		Nodo<T> ultimo=null;
-		if (isEmpty())
-		{
-			 throw new VacioException("La lista está vacía");
+		if (isEmpty()){
+			 throw new VacioException(vacio);
 		}
-		else if(first.getNext()!=null)
-		{
-			if(first.getNext().getNext()!=null)
-			{
+		else if(first.getNext()!=null){
+			if(first.getNext().getNext()!=null){
 				Nodo<T> penultimo= first;
 				
-				while(penultimo.getNext().getNext()!=null)
-				{
+				while(penultimo.getNext().getNext()!=null){
 					penultimo=penultimo.getNext();
 				}
 				ultimo= penultimo.getNext();
@@ -169,76 +169,59 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 				
 				size--;
 			}
-			else
-			{
+			else{
 				Nodo<T> penultimo= first;
 				ultimo= penultimo.getNext();
 				penultimo.disconnectNext(penultimo);
 				last=penultimo;
 				size--;
-				
 			}
-			
 		}
-		else
-		{
+		else{
 			ultimo= first;
 			first=null;
 		}
-		
 		return ultimo.getInfo();
-		
-		
 	}
-	
-	public T deleteElement(int pos) throws PosException, VacioException
-	{
-		T retorno=null;
-		
-		 if (pos<1 || pos >size)
-		 {
-			 throw new PosException("La posición no es válida");
-		 }
-		 else if (isEmpty())
-		 {
-			 throw new VacioException("La lista está vacía");
-		 }
-		 else
-		 {
-			if ( pos==1)
-			{
-				retorno=removeFirst();
-			}
-			else if (pos==size())
-			{
-				retorno=removeLast();
-			}
-			else 
-			{
-				Nodo<T> actual= first;
-				if(actual.getNext()!=null) 
-				{	
-					Nodo<T> anterior=null;
-					while(actual.getNext()!=null && !actual.getInfo().equals(getElement(pos-1)))
-					{
-						anterior=actual;
-						actual=actual.getNext();
-					}
-					retorno=actual.getInfo();
-					anterior.disconnectNext(anterior);
-				}
-				else 
-				{
-					Nodo<T> anterior=null;
-					
-					retorno=actual.getInfo();
-					anterior.disconnectNext(anterior);
-				}
-			}
+
+	public T deleteElement(int pos) throws PosException, VacioException {
+		if (pos < 1 || pos > size) {
+			throw new PosException(posicionNoValida);
 		}
-		
+
+		if (isEmpty()) {
+			throw new VacioException(vacio);
+		}
+
+		T retorno;
+
+		if (pos == 1) {
+			retorno = removeFirst();
+		} else if (pos == size()) {
+			retorno = removeLast();
+		} else {
+			retorno = removeElementAt(pos);
+		}
+
 		size--;
-		
+		return retorno;
+	}
+
+	private T removeElementAt(int pos) {
+		Nodo<T> actual = first;
+		Nodo<T> anterior = null;
+
+		for (int i = 1; i < pos; i++) {
+			anterior = actual;
+			actual = actual.getNext();
+		}
+
+		T retorno = actual.getInfo();
+
+		if (anterior != null) {
+			anterior.disconnectNext(anterior);
+		}
+
 		return retorno;
 	}
 	
@@ -246,7 +229,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (isEmpty())
 		{
-			throw new VacioException("La lista está vacía");
+			throw new VacioException(vacio);
 		}
 		else
 		{
@@ -271,11 +254,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (pos<1 || pos >size)
 		{
-			 throw new PosException("La posición no es válida");
+			 throw new PosException(posicionNoValida);
 		}
 		else if(isEmpty())
 		{
-			throw new VacioException("La lista está vacía");
+			throw new VacioException(vacio);
 		}
 		else
 		{
@@ -304,11 +287,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 		int pos =-1;
 		if (element ==null)
 		{
-			throw new NullException("No es válido el elemento ingresado");
+			throw new NullException(elemtoNoValido);
 		}
 		else if (isEmpty())
 		{
-			throw new VacioException("La lista está vacía");
+			throw new VacioException(vacio);
 		}
 		else
 		{
@@ -330,11 +313,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		 if (pos1>size|| pos2>size || pos1<1 || pos2<1)
 		 {
-			 throw new PosException("La posición no es válida");
+			 throw new PosException(posicionNoValida);
 		 }
 		 else if(isEmpty())
 		 {
-			 throw new VacioException("La lista está vacía");
+			 throw new VacioException(vacio);
 		 }
 		 else if ( pos1!=pos2 && size>1)
 		{
@@ -368,11 +351,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 		}
 		else if (isEmpty())
 		{
-			throw new VacioException("La lista está vacía");
+			throw new VacioException(vacio);
 		}
 		else if(element==null)
 		{
-			throw new NullException("No es válido el elemento ingresado");
+			throw new NullException(elemtoNoValido);
 		}
 		else
 		{
@@ -392,7 +375,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (isEmpty())
 		{
-			throw new VacioException("La lista está vacía");
+			throw new VacioException(vacio);
 		}
 		else if (numElementos<0)
 		{

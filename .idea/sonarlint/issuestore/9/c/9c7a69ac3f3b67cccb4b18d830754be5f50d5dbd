@@ -7,6 +7,8 @@ w
 java:S1192;"\Define a constant instead of duplicating this literal "La posiciÃ³n no es vÃ¡lida" 12 times.(•Ô‚Çúÿÿÿÿ
 q
 java:S1192C"VDefine a constant instead of duplicating this literal "La lista estÃ¡ vacÃ­a" 9 times.(Ş©…úÿÿÿÿ
+b
+java:S2583®"DChange this condition so that it does not always evaluate to "false"(¹†¦¨8ö‡€÷À1
 @
 java:S1197"*Move the array designators [] to the type.(çá³÷
 o

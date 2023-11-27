@@ -8,7 +8,7 @@ public class MinPQ<K extends Comparable<K> ,V extends Comparable <V>>
 	
 	public MinPQ(int inicial)
 	{
-		arbol= new ArregloDinamico<NodoTS<K, V>>(inicial);
+		arbol= new ArregloDinamico(inicial);
 		tamano=0;
 	}
 	
@@ -40,7 +40,7 @@ public class MinPQ<K extends Comparable<K> ,V extends Comparable <V>>
 	{
 		try 
 		{
-			arbol.insertElement(new NodoTS<K, V>(key, value), arbol.size()+1);
+			arbol.insertElement(new NodoTS(key, value), arbol.size()+1);
 			tamano++;
 			swim(arbol, tamano);
 		} 

@@ -102,7 +102,8 @@ public final class Ordenamiento <T extends Comparable <T>>
 	
 	public int partition(ILista<T> lista, Comparator<T> criterio, boolean ascendente, int lo, int hi) throws PosException, VacioException
 	{
-		int follower, leader;
+		int follower;
+		int leader;
 		follower=leader=lo;
 		
 		while(leader<hi)
@@ -136,7 +137,9 @@ public final class Ordenamiento <T extends Comparable <T>>
 			ordenarMergeSort(rightList, criterio, ascendente);
 			
 			//i recorre la lista de la izquierda, j la derecha y k la lista original.
-			int i,j,k;
+			int i;
+			int j;
+			int k;
 			i=j=k= 1;
 			
 			int leftelements = leftList.size();
